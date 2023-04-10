@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="shortcut icon" href="#">
+  <title>Momo P2P</title>
+</head>
+
+<body>
+  <h3>Momo P2P</h3>
+  <div>
+    <input type="button" onclick="connect();" value="Connect">
+    <input type="button" onclick="disconnect();" value="Disconnect">
+    <input type="button" onclick="play();" value="Play">
+    <input type="text" id="data_text">
+    <input type="button" onclick="sendDataChannel();" value="Send">
+  </div>
+
+  <h4>Control LED. (connected)</h4>
+  <div>
+    <input type="button" onclick="cmd_Turn_LED_on();" value="Turn LED on">
+    <input type="button" onclick="cmd_Turn_LED_off();" value="Turn LED off">
+    <input type="button" onclick="cmd_Turn_LED_with_time();" value="Turn LED on with time">
+    <select id="time1">
+      <option value="50">50ms</option>
+      <option value="100">100ms</option>
+      <option value="150">150ms</option>
+      <option value="200">100ms</option>
+    </select>
+  </div>
+
+  <h4>Control Mist. (connected)</h4>
+  <div>
+    <input type="button" onclick="cmd_Turn_Mist_on();" value="Activate Mist">
+    <input type="button" onclick="cmd_Turn_Mist_off();" value="Deactivate Mist">
+    <input type="button" onclick="cmd_Turn_Mist_with_time();" value="Activate Mist with time">
+    <select id="time2">
+      <option value="50">50ms</option>
+      <option value="100">100ms</option>
+      <option value="150">150ms</option>
+      <option value="200">100ms</option>
+    </select>
+  </div>
+
+  <h4>Set current time</h4>
+  <div>
+    <input type="button" onclick="cmd_current_time_date();" value="Set buffer date">
+    <input type="button" onclick="cmd_current_time_month();" value="Set buffer month">
+    <input type="button" onclick="cmd_current_time_year();" value="Set buffer year">
+    <input type="button" onclick="cmd_current_time_hour();" value="Set buffer hour">
+    <input type="button" onclick="cmd_current_time_minute();" value="Set buffer minute">
+    <input type="button" onclick="cmd_current_time_mem();" value="Write buffer to mem">
+  </div>
+
+  <h4>Set first alarm</h4>
+  <div>
+    <input type="button" onclick="cmd_alarm1_time_date();" value="Set buffer date">
+    <input type="button" onclick="cmd_alarm1_time_month();" value="Set buffer month">
+    <input type="button" onclick="cmd_alarm1_time_year();" value="Set buffer year">
+    <input type="button" onclick="cmd_alarm1_time_hour();" value="Set buffer hour">
+    <input type="button" onclick="cmd_alarm1_time_minute();" value="Set buffer minute">
+    <input type="button" onclick="cmd_alarm1_time_mem();" value="Write buffer to mem">
+  </div>
+
+  <h4>Set second alarm</h4>
+  <div>
+    <input type="button" onclick="cmd_alarm2_time_date();" value="Set buffer date">
+    <input type="button" onclick="cmd_alarm2_time_month();" value="Set buffer month">
+    <input type="button" onclick="cmd_alarm2_time_year();" value="Set buffer year">
+    <input type="button" onclick="cmd_alarm2_time_hour();" value="Set buffer hour">
+    <input type="button" onclick="cmd_alarm2_time_minute();" value="Set buffer minute">
+    <input type="button" onclick="cmd_alarm2_time_mem();" value="Write buffer to mem">
+  </div>
+
+  <div>
+    <video id="remote_video" autoplay style="border: 3px solid gray;"></video>
+  </div>
+  <script type='text/javascript' src='./webrtc_demo.js'></script>
+</body>
+
+</html>
